@@ -3,37 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
-        .hello {
-            font-size: 3em;
-            color: #3498db;
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeInUp 1s forwards;
-        }
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <title>Simple PHP App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="hello">
-        <?php
-            echo "Hello, World!";
-        ?>
+    <div class="container">
+        <h1>Welcome to the Simple PHP App!</h1>
+        <p>Please enter your name to get a personalized greeting:</p>
+        <form action="process.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </body>
 </html>
